@@ -23,4 +23,4 @@ We have written *run\_analysis.R*  with *R version 3.1.0* and we have run the sc
 
 #Codebook
 
-* The codebook containing the detailed description of all variables can be found in the Word document code\_book. 
+* The codebook containing the detailed description of all variables can be found in CODE\_BOOK.md (available in this repository). 
