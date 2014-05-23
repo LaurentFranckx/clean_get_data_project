@@ -17,7 +17,7 @@ From this initial set of features, we have selected all the variables expressing
 
 * Start from a folder containg the folder ./data/UCI HAR Dataset where UCI HAR Dataset contains the *unzipped* raw data obtained from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip ), maintaining the original folder structure. 
 * Run run\_analysis.R 
-* The outputfile is average\_activity\_subject.R. 
+* The outputfile is average\_activity\_subject.txt  
 
 We have written *run\_analysis.R*  with *R version 3.1.0* and we have run the script on a *x86\_64-w64-mingw32/x64 (64-bit)* platform. 
 
