@@ -22,7 +22,7 @@ Subsequently, the body linear acceleration and angular velocity were derived in 
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate **frequency domain signals**). 
 
-Anguita et al. have used these signals were used to estimate variables of the feature vector for each pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+Anguita et al. have used these signals to estimate variables of the feature vector for each pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 - tBodyAcc-XYZ
 - tGravityAcc-XYZ
@@ -94,7 +94,7 @@ The names of the selected features follow "camel case" - see [http://en.wikipedi
 Starting from the original names, the script has achieved this by:
 
 * Eliminating all hyphens and parentheses from the names of the selected features.
-* Expanding the names of the selected features where it improves readability or if they do not comply with CamelCase notation ("std" to "StanDev"  , "mean" to "Mean"  , "t" to "TimeSign" "f" to "FreqDom"  , and "acc" to  "Accel").
+* Expanding the names of the selected features where it improves readability or if they do not comply with CamelCase notation ("std" to "StanDev", "mean" to "Mean"  and "acc" to  "Accel").
 
 ### List of variables and description
 
@@ -109,42 +109,42 @@ In what follows:
 The table "average\_activity\_subject.txt" contains the following variables: 
 
 * **label**: The original label of each activity; there are 6 activity labels
-* **activityname**: The name of each activity: : WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+* **activityname**: The name of each activity: : WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING.
 * **subject**: The code corresponding to each subject. There are 30 subjects, identified by numbers ranging from 1 to 30.
-* **TimeSignBodyAccStanDevXYZ**:           	The average value of the standard deviation of the time domain body acceleration signal (X, Y and Z coordinates, respectively)
-* **TimeSignGravityAccStanDevXYZ**: The average value of the standard deviation of the time domain gravity acceleration signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyAccJerkStanDevXYZ**:      	The average value of the standard deviation of the time domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyGyroStanDevXYZ**: The average value of the standard deviation of the time domain body angular velocity signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyGyroJerkStanDevXYZ**: The average value of the standard deviation of the time domain body angular velocity jerk signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyAccMagStanDev**: The average value of the standard deviation of the magnitude of the time domain body acceleration signal
-* **TimeSignGravityAccMagStanDev**:     	The average value of the standard deviation of the magnitude of the time domain gravity acceleration signal
-* **TimeSignBodyAccJerkMagStanDev**:     	The average value of the standard deviation of the magnitude of the time domain body linear acceleration jerk signal
-* **TimeSignBodyGyroMagStanDev**:       	The average value of the standard deviation of the magnitude of the time domain body angular velocity signal 
-* **TimeSignBodyGyroJerkMagStanDev**:   	The average value of the standard deviation of the magnitude of the time domain body angular velocity jerk signal
-* **FreqDomBodyAccStanDevXYZ**: The average value of the standard deviation of the frequency domain body acceleration signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyAccJerkStanDevXYZ**: The average value of the standard deviation of the frequency domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyGyroStanDevXYZ**:	The average value of the standard deviation of the frequency domain body angular velocity signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyAccMagStanDev**: The average value of the standard deviation of magnitude of the frequency domain body acceleration signal
-* **FreqDomBodyBodyAccJerkMagStanDev**:	The average value of the standard deviation of the magnitude of the frequency domain body linear acceleration jerk signal
-* **FreqDomBodyBodyGyroMagStanDev**: The average value of the standard deviation of the magnitude of the frequency domain body angular velocity signal
-* **FreqDomBodyBodyGyroJerkMagStanDev**: The average value of the standard deviation of the magnitude of the frequency domain body angular velocity jerk signal
-* **TimeSignBodyAccMeanXYZ**: 	The average value of the mean of the time domain body acceleration signal (X, Y and Z coordinates, respectively)
-* **TimeSignGravityAccMeanXYZ**:           	The average value of the mean of the time domain gravity acceleration signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyAccJerkMeanXYZ**: 	The average value of the mean of the time domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyGyroMeanXYZ**:           	The average value of the mean of the time domain body angular velocity signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyGyroJerkMeanXYZ**:          	The average value of the mean of the time domain body angular velocity jerk signal (X, Y and Z coordinates, respectively)
-* **TimeSignBodyAccMagMean**:            	The average value of the mean of the magnitude of the time domain body acceleration signal
-* **TimeSignGravityAccMagMean**:The average value of the mean of the magnitude of the time domain gravity acceleration signal
-* **TimeSignBodyAccJerkMagMean**:The average value of the mean of the magnitude of the time domain body linear acceleration jerk signal
-* **TimeSignBodyGyroMagMean**: The average value of the magnitude of the mean of the time domain body angular velocity signal
-* **TimeSignBodyGyroJerkMagMean**: The average value of the mean of the magnitude of the time domain body angular velocity jerk signal
-* **FreqDomBodyAccMeanXYZ**:               	The average value of the mean of the frequency domain body acceleration signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyAccJerkMeanXYZ**: The average value of the mean of the frequency domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyGyroMeanXYZ**:              	The average value of the mean of the frequency domain body angular velocity signal (X, Y and Z coordinates, respectively)
-* **FreqDomBodyAccMagMean**: The average value of the mean of the magnitude of the frequency domain body acceleration signal
-* **FreqDomBodyBodyAccJerkMagMean**: The average value of the mean of the magnitude of the frequency domain body linear acceleration jerk signal
-* **FreqDomBodyBodyGyroMagMean**: The average value of the mean of the magnitude of the frequency domain body angular velocity signal
-* **FreqDomBodyBodyGyroJerkMagMean**: The average value of the mean of the magnitude of the frequency domain body angular velocity jerk signal
+* **tBodyAccStanDevXYZ**:           	The average value of the standard deviation of the time domain body acceleration signal (X, Y and Z coordinates, respectively)
+* **tGravityAccStanDevXYZ**: The average value of the standard deviation of the time domain gravity acceleration signal (X, Y and Z coordinates, respectively)
+* **tBodyAccJerkStanDevXYZ**:      	The average value of the standard deviation of the time domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
+* **tBodyGyroStanDevXYZ**: The average value of the standard deviation of the time domain body angular velocity signal (X, Y and Z coordinates, respectively)
+* **tBodyGyroJerkStanDevXYZ**: The average value of the standard deviation of the time domain body angular velocity jerk signal (X, Y and Z coordinates, respectively)
+* **tBodyAccMagStanDev**: The average value of the standard deviation of the magnitude of the time domain body acceleration signal
+* **tGravityAccMagStanDev**:     	The average value of the standard deviation of the magnitude of the time domain gravity acceleration signal
+* **tBodyAccJerkMagStanDev**:     	The average value of the standard deviation of the magnitude of the time domain body linear acceleration jerk signal
+* **tBodyGyroMagStanDev**:       	The average value of the standard deviation of the magnitude of the time domain body angular velocity signal 
+* **tBodyGyroJerkMagStanDev**:   	The average value of the standard deviation of the magnitude of the time domain body angular velocity jerk signal
+* **fBodyAccStanDevXYZ**: The average value of the standard deviation of the frequency domain body acceleration signal (X, Y and Z coordinates, respectively)
+* **fBodyAccJerkStanDevXYZ**: The average value of the standard deviation of the frequency domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
+* **fBodyGyroStanDevXYZ**:	The average value of the standard deviation of the frequency domain body angular velocity signal (X, Y and Z coordinates, respectively)
+* **fBodyAccMagStanDev**: The average value of the standard deviation of magnitude of the frequency domain body acceleration signal
+* **fBodyBodyAccJerkMagStanDev**:	The average value of the standard deviation of the magnitude of the frequency domain body linear acceleration jerk signal
+* **fBodyBodyGyroMagStanDev**: The average value of the standard deviation of the magnitude of the frequency domain body angular velocity signal
+* **fBodyBodyGyroJerkMagStanDev**: The average value of the standard deviation of the magnitude of the frequency domain body angular velocity jerk signal
+* **tBodyAccMeanXYZ**: 	The average value of the mean of the time domain body acceleration signal (X, Y and Z coordinates, respectively)
+* **tGravityAccMeanXYZ**:           	The average value of the mean of the time domain gravity acceleration signal (X, Y and Z coordinates, respectively)
+* **tBodyAccJerkMeanXYZ**: 	The average value of the mean of the time domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
+* **tBodyGyroMeanXYZ**:           	The average value of the mean of the time domain body angular velocity signal (X, Y and Z coordinates, respectively)
+* **tBodyGyroJerkMeanXYZ**:          	The average value of the mean of the time domain body angular velocity jerk signal (X, Y and Z coordinates, respectively)
+* **tBodyAccMagMean**:            	The average value of the mean of the magnitude of the time domain body acceleration signal
+* **tGravityAccMagMean**:The average value of the mean of the magnitude of the time domain gravity acceleration signal
+* **tBodyAccJerkMagMean**:The average value of the mean of the magnitude of the time domain body linear acceleration jerk signal
+* **tBodyGyroMagMean**: The average value of the magnitude of the mean of the time domain body angular velocity signal
+* **tBodyGyroJerkMagMean**: The average value of the mean of the magnitude of the time domain body angular velocity jerk signal
+* **fBodyAccMeanXYZ**:               	The average value of the mean of the frequency domain body acceleration signal (X, Y and Z coordinates, respectively)
+* **fBodyAccJerkMeanXYZ**: The average value of the mean of the frequency domain body linear acceleration jerk signal (X, Y and Z coordinates, respectively)
+* **fBodyGyroMeanXYZ**:              	The average value of the mean of the frequency domain body angular velocity signal (X, Y and Z coordinates, respectively)
+* **fBodyAccMagMean**: The average value of the mean of the magnitude of the frequency domain body acceleration signal
+* **fBodyBodyAccJerkMagMean**: The average value of the mean of the magnitude of the frequency domain body linear acceleration jerk signal
+* **fBodyBodyGyroMagMean**: The average value of the mean of the magnitude of the frequency domain body angular velocity signal
+* **fBodyBodyGyroJerkMagMean**: The average value of the mean of the magnitude of the frequency domain body angular velocity jerk signal
 
 
 

@@ -54,14 +54,14 @@ cols_to_include <- c("label","subject", vars_to_include)
 globalset_restrict <- globalset[  , cols_to_include]
 
 
+# renaiming the columns ---------------------------------------------------
+
+
 names(globalset_restrict) <- gsub("\\(", ""  , names(globalset_restrict))
 names(globalset_restrict) <- gsub("\\)", ""  , names(globalset_restrict))
 names(globalset_restrict) <- gsub("-", ""  , names(globalset_restrict))
 names(globalset_restrict) <- gsub("std", "StanDev"  , names(globalset_restrict))
 names(globalset_restrict) <- gsub("mean", "Mean"  , names(globalset_restrict))
-names(globalset_restrict) <- gsub("^t", "TimeSign"  , names(globalset_restrict))
-names(globalset_restrict) <- gsub("^f", "FreqDom"  , names(globalset_restrict))
-names(globalset_restrict) <- gsub("acc", "Accel"  , names(globalset_restrict))
 
 # calculate means per subject and activity --------------------------------
 
@@ -69,6 +69,10 @@ library(plyr)
 vars_to_include <- setdiff(names(globalset_restrict),"label")
 vars_to_include <- setdiff(vars_to_include,"subject")
 globalset_restr_avg <- aggregate(globalset_restrict[ vars_to_include], by = list(globalset_restrict$label,globalset_restrict$subject), mean )
+
+
+# finalising and writing the summary table to disk ------------------------
+
 
 names(globalset_restr_avg) <- gsub( "Group.1", "label", names(globalset_restr_avg) )
 names(globalset_restr_avg) <- gsub( "Group.2", "subject", names(globalset_restr_avg) )
